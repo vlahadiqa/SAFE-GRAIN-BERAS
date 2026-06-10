@@ -238,7 +238,7 @@ Status server dan versi.
 | Divisi | Anggota |
 |---|---|
 | Computer Vision | Andy Bagus Oesmadi · Maulidah Imroatus Solehah · Mishal Eman |
-| Front-End, Back-End & UI/UX | Venerdi Dinarsa Narendra Putra C. · Vlahadiqa Runayasha Khandeva W. · Zacky Maulana |
+| Front-End, Back-End & UI/UX | Venerdi Dinarsa Narendra Putra C. · Vlahadiqa Runayasha Khandeva W. · Zacky Maulanaa |
 | System Analyst | Muhammad Zidan Al Farezel · Vichars Mazcheranou Hafizh |
 
 ---

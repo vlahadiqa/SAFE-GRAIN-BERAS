@@ -1,5 +1,7 @@
 export function calculateGrade(utuh, pecah, bendaAsing, basePrice = 0) {
-  const total = utuh + pecah
+  // Hitung persentase butir utuh dari SEMUA objek terdeteksi (termasuk benda asing)
+  // agar grade tidak bisa PREMIUM meski ada banyak benda asing
+  const total = utuh + pecah + bendaAsing
   const percentUtuh = total === 0 ? 0 : (utuh / total) * 100
 
   let grade, label, description, colorClass, barColor, finalPrice

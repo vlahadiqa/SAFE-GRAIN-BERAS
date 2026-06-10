@@ -7,7 +7,7 @@ from fastapi import FastAPI, HTTPException
 from fastapi.staticfiles import StaticFiles
 from fastapi.responses import FileResponse
 from fastapi.middleware.cors import CORSMiddleware
-from pydantic import BaseModel, field_validator
+from pydantic import BaseModel, Field, field_validator
 from sqlalchemy import create_engine, Column, Integer, Float, String, DateTime, func
 from sqlalchemy.orm import DeclarativeBase, Session
 from ultralytics import YOLO
@@ -110,7 +110,8 @@ COLOR_PECAH  = (0, 255, 255)  # Kuning
 #  Grading logic (mirrors frontend)
 # ─────────────────────────────────────────
 def calculate_grade(utuh: int, pecah: int, benda_asing: int, base_price: float = 0):
-    total = utuh + pecah
+    # Hitung persentase butir utuh dari SEMUA objek terdeteksi (termasuk benda asing)
+    total = utuh + pecah + benda_asing
     pct   = (utuh / total * 100) if total > 0 else 0.0
 
     if pct >= 85:
@@ -131,7 +132,7 @@ def calculate_grade(utuh: int, pecah: int, benda_asing: int, base_price: float =
 # ─────────────────────────────────────────
 class DetectRequest(BaseModel):
     image: str
-    base_price: float = 0.0
+    base_price: float = Field(default=0.0, ge=0.0, description="Harga dasar beras per kg (tidak boleh negatif)")
 
     @field_validator("image")
     @classmethod

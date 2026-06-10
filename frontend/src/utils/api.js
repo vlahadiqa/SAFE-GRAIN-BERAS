@@ -1,4 +1,4 @@
-const BASE = 'https://safe-grain-beras-production.up.railway.app'
+const BASE = import.meta.env.VITE_API_BASE_URL ?? ''
 
 export async function detectRice(imageBase64, basePrice = 0) {
   const res = await fetch(`${BASE}/detect`, {

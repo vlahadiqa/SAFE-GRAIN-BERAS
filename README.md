@@ -296,8 +296,8 @@ Status server dan versi.
 
 | Divisi | Anggota |
 |---|---|
-| Computer Vision | Andy Bagus Oesmadi · Zacky Maulana |
-| Front-End, Back-End & UI/UX | Venerdi Dinarsa Narendra Putra C · Vlahadiqa Runayasha Khandeva W |
+| AI Engineer | Andy Bagus Oesmadi · Zacky Maulana |
+| Front-End & Back-End. | Venerdi Dinarsa Narendra Putra C · Vlahadiqa Runayasha Khandeva W |
 
 ---
 
